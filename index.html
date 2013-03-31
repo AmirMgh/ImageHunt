@@ -143,7 +143,7 @@ font-weight: bold;
  $('#sendButton').html('Loading ...');
  $('#sendButton').attr('disabled', 'disabled');
  $.ajax({
- url: 'http://localhost/image_hunt/tag_controller.php?tag=' + $("#imgTag").val() + '&imgSrc=' + $("#gameImg").attr("src") + '&user=' + userName,
+ url: 'tag_controller.php?tag=' + $("#imgTag").val() + '&imgSrc=' + $("#gameImg").attr("src") + '&user=' + userName,
  type: 'GET',
  success: function(data) {
  $('#sendButton').html('Send');
@@ -170,7 +170,7 @@ font-weight: bold;
  function getImages() {
  refreshLeaderBoard();
  $.ajax({
- url: 'http://localhost/image_hunt/getimage.php?tag=' + $("#imgTag").val() + '&imgSrc=' + $("#gameImg").attr("src") + '&user=iamauser',
+ url: 'getimage.php?tag=' + $("#imgTag").val() + '&imgSrc=' + $("#gameImg").attr("src") + '&user=iamauser',
  type: 'GET',
  success: function(data) {
  imgArray = jQuery.parseJSON(data);
