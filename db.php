@@ -3,7 +3,7 @@ class ImageHuntDB{
 	public $conn;
 
 	function __construct(){
-		$this->conn = mysqli_connect("127.0.0.1","root","","image_hunt");
+		$this->conn = mysqli_connect("127.0.0.1","your mysql username","your mysql password","image_hunt");
 
 		if (mysqli_connect_errno($this->conn)) {
 			echo "Failed to connect to MySQL:" . mysqli_connect_error();
